@@ -1,6 +1,6 @@
 # Niruttara Organics
 
-Marketing website for **Niruttara Organics** — a catalogue-only site. Visitors browse products and place orders via WhatsApp (no checkout on the site).
+Catalogue website for **Niruttara Organic Farm** near Malavalli, Karnataka. Visitors browse online and place orders only via WhatsApp (no checkout).
 
 ## Stack
 
@@ -27,8 +27,9 @@ npm run preview
 
 Edit `web/src/data.ts`:
 
-- `WHATSAPP_NUMBER` — business WhatsApp number with country code (no `+` or spaces)
+- `WHATSAPP_NUMBER` — currently `919980005314`
+- `EMAIL` — `niruttaraorganics@gmail.com`
 - `INSTAGRAM_URL` — Instagram profile
-- `products` — product catalogue copy and images
+- `offerings` — farm sections and imagery
 
-Logo lives at `web/public/logo.png`.
+Registered logo: `web/public/logo.png` (do not alter).
