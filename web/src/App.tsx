@@ -79,7 +79,7 @@ export default function App() {
     <div className="site">
       <header className={`nav ${navSolid ? 'nav--solid' : ''} ${menuOpen ? 'nav--open' : ''}`}>
         <a href="#top" className="nav__brand" onClick={closeMenu}>
-          <img src="/logo.png" alt="" className="nav__logo" width={40} height={40} />
+          <img src="/niruttar_organics_logo.png" alt="" className="nav__logo" width={40} height={40} />
           <span>Niruttara Organics</span>
         </a>
         <button
@@ -125,7 +125,7 @@ export default function App() {
           </div>
           <div className="hero__content">
             <img
-              src="/logo.png"
+              src="/niruttar_organics_logo.png"
               alt=""
               className="hero__mark"
               width={140}
@@ -300,7 +300,7 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        <img src="/logo.png" alt="" className="footer__logo" width={64} height={64} />
+        <img src="/niruttar_organics_logo.png" alt="" className="footer__logo" width={64} height={64} />
         <div className="footer__brand">Niruttara Organics</div>
         <p className="footer__note">
           Chemical-free produce · {LOCATION} · Est. 2023

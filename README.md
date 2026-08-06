@@ -32,4 +32,4 @@ Edit `web/src/data.ts`:
 - `INSTAGRAM_URL` — Instagram profile
 - `offerings` — farm sections and imagery
 
-Registered logo: `web/public/logo.png` (do not alter).
+Registered logo: `web/public/niruttar_organics_logo.png` (do not alter).
