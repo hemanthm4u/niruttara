@@ -125,7 +125,7 @@ export default function App() {
         <section className="hero" aria-label="Niruttara Organics">
           <div className="hero__media" aria-hidden="true">
             <img
-              src="/products/farm-cta.png"
+              src="/products/gir_cow.png"
               alt=""
               className="hero__image"
             />
@@ -205,8 +205,8 @@ export default function App() {
           </div>
           <Reveal className="story__visual" delay={200}>
             <img
-              src="/products/gir-cows.png"
-              alt="Gir cow and calf at Niruttara Organics farm"
+              src="/products/gir_cow.png"
+              alt="Gir cow and calf feeding at Niruttara Organics farm"
             />
           </Reveal>
         </section>
@@ -290,7 +290,7 @@ export default function App() {
 
         <section className="farm-cta" aria-label="Order from our farm">
           <div className="farm-cta__media" aria-hidden="true">
-            <img src="/products/farm-cta.png" alt="" />
+            <img src="/products/gir_cow.png" alt="" />
             <div className="farm-cta__veil" />
           </div>
           <Reveal className="farm-cta__content">
