@@ -133,11 +133,11 @@ export default function App() {
             />
             <p className="hero__brand">Niruttara Organics</p>
             <h1 className="hero__headline">
-              Fresh, chemical-free produce from our farm.
+              Pure by Nature. Premium by Choice.
             </h1>
             <p className="hero__lede">
-              Two IT professionals turned farmers, cultivating sustainable
-              harvests near Malavalli, Karnataka.
+              Organic vegetables, seasonal fruits, and premium A2 dairy —
+              from our farm near Malavalli to your home.
             </p>
             <div className="hero__actions">
               <a
@@ -161,18 +161,38 @@ export default function App() {
         <section id="story" className="story">
           <div className="story__inner">
             <Reveal>
-              <p className="eyebrow">Welcome to Niruttara Organic Farm · Est. 2023</p>
+              <p className="eyebrow">About Niruttara Organics · Est. 2023</p>
               <h2 className="section-title">
-                From keyboards to the fields.
+                True quality begins at the source.
               </h2>
             </Reveal>
-            <Reveal delay={120}>
+            <Reveal delay={100}>
               <p className="story__text">
-                We are two IT professionals turned farmers on a mission to
-                cultivate fresh, chemical-free produce while promoting
-                sustainable farming. Here we share our experiences, challenges,
-                and tips — a journey of passion and sustainability toward a
-                healthier, greener future.
+                At Niruttara Organics, our farm is dedicated to cultivating
+                organic vegetables, seasonal fruits, and premium A2 dairy
+                products with care, integrity, and respect for nature.
+              </p>
+            </Reveal>
+            <Reveal delay={160}>
+              <p className="story__text">
+                Our Gir cows are nurtured in a natural, stress-free environment
+                and cared for with the highest standards of animal welfare.
+                This allows us to produce fresh A2 Milk, Paneer, Butter, Ghee,
+                and other dairy products that are rich in taste and
+                uncompromising in quality.
+              </p>
+            </Reveal>
+            <Reveal delay={220}>
+              <p className="story__text">
+                Every harvest and every product reflects our commitment to
+                sustainable farming, purity, and freshness. From our farm to
+                your home, we bring you food that is naturally wholesome,
+                ethically produced, and crafted with care.
+              </p>
+            </Reveal>
+            <Reveal delay={280}>
+              <p className="story__tagline">
+                Pure by Nature. Premium by Choice.
               </p>
             </Reveal>
           </div>
@@ -190,9 +210,9 @@ export default function App() {
               <p className="eyebrow">On the farm</p>
               <h2 className="section-title">What you will find here</h2>
               <p className="products__hint">
-                Browse what we grow and how we farm. To order fresh produce,
-                message us on WhatsApp — we confirm availability and delivery
-                personally.
+                Browse our organic vegetables, seasonal fruits, and A2 dairy.
+                To order, message us on WhatsApp — we confirm availability and
+                delivery personally.
               </p>
             </Reveal>
           </div>

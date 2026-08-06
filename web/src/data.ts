@@ -16,62 +16,62 @@ export const whatsappOrderLink = (productName?: string) => {
 
 export const offerings = [
   {
-    id: 'techniques',
-    name: 'Organic farming techniques',
-    tagline: 'Chemical-free by design.',
+    id: 'vegetables',
+    name: 'Organic vegetables',
+    tagline: 'Grown with care and integrity.',
     description:
-      'From soil prep to harvest, we grow with methods that protect the land and keep produce truly fresh — no synthetic chemicals, no shortcuts.',
+      'Fresh, chemical-free vegetables cultivated on our farm with respect for nature — wholesome harvests from soil to table.',
     image:
       'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Rows of healthy green crops on an organic farm',
+    imageAlt: 'Fresh organic vegetables in the field',
   },
   {
-    id: 'compost',
-    name: 'Composting & natural fertilizers',
-    tagline: 'Feeding the soil first.',
+    id: 'fruits',
+    name: 'Seasonal fruits',
+    tagline: 'Picked at their peak.',
     description:
-      'We build fertility with compost and natural inputs so the land stays alive — healthier soil, stronger plants, cleaner food.',
+      'Seasonal fruits grown sustainably and harvested for purity and freshness — naturally wholesome, ethically produced.',
     image:
-      'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Hands working with rich compost and soil',
+      'https://images.unsplash.com/photo-1619566636858-adf3ef4644b9?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Basket of fresh seasonal fruit',
   },
   {
-    id: 'rotation',
-    name: 'Crop rotation & eco-friendly practices',
-    tagline: 'Farming in rhythm with nature.',
+    id: 'dairy',
+    name: 'Premium A2 dairy',
+    tagline: 'From our Gir cows.',
     description:
-      'Rotating crops and choosing eco-friendly practices keep pests in balance and the farm resilient season after season.',
+      'Our Gir cows are nurtured in a natural, stress-free environment. Fresh A2 Milk, Paneer, Butter, Ghee, and more — rich in taste, uncompromising in quality.',
     image:
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Open farmland under soft morning light',
+      'https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Fresh A2 ghee and dairy products',
   },
   {
-    id: 'fresh',
-    name: 'Farm-to-table freshness',
-    tagline: 'From our fields to your kitchen.',
+    id: 'farm-to-home',
+    name: 'Farm to your home',
+    tagline: 'Crafted with care.',
     description:
-      'What leaves our farm is fresh, chemical-free produce — grown near Malavalli, Karnataka, and shared with care.',
+      'Every harvest and every product reflects our commitment to sustainable farming, purity, and freshness — from our farm to your home.',
     image:
       'https://images.unsplash.com/photo-1488459716781-31db5254d4d3?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Fresh harvested vegetables and produce',
+    imageAlt: 'Fresh farm produce ready for home',
   },
 ]
 
 export const practices = [
   {
-    title: 'Organic techniques',
-    text: 'Everyday farming choices that keep produce chemical-free and the land healthier for the long run.',
+    title: 'Sustainable farming',
+    text: 'We cultivate with integrity and respect for nature — soil, animals, and season in balance.',
   },
   {
-    title: 'Compost & natural fertility',
-    text: 'We rely on composting and natural fertilizers instead of synthetic inputs.',
+    title: 'Animal welfare',
+    text: 'Our Gir cows live in a natural, stress-free environment with the highest standards of care.',
   },
   {
-    title: 'Crop rotation',
-    text: 'Eco-friendly rotation and field practices that protect soil life and biodiversity.',
+    title: 'Purity & freshness',
+    text: 'Every harvest and dairy product is naturally wholesome, ethically produced, and crafted with care.',
   },
   {
-    title: 'Farm-to-table',
-    text: 'Fresh harvests from our farm near Malavalli — a journey of passion and sustainability.',
+    title: 'Farm to home',
+    text: 'From our farm near Malavalli to your kitchen — food that begins at the source.',
   },
 ]
