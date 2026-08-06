@@ -1,0 +1,4 @@
+{
+  "name": "niruttara",
+  "install": "test -f README.md"
+}
