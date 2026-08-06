@@ -1,7 +1,9 @@
-/** Update this number to your business WhatsApp (country code + number, no + or spaces). */
-export const WHATSAPP_NUMBER = '918123223361'
+/** Business WhatsApp: country code + number, no + or spaces. */
+export const WHATSAPP_NUMBER = '919980005314'
 
 export const INSTAGRAM_URL = 'https://www.instagram.com/niruttaraorganics/'
+export const EMAIL = 'niruttaraorganics@gmail.com'
+export const LOCATION = 'Near Malavalli, Karnataka'
 
 export const whatsappOrderLink = (productName?: string) => {
   const base =
@@ -12,60 +14,64 @@ export const whatsappOrderLink = (productName?: string) => {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 }
 
-export const products = [
+export const offerings = [
   {
-    id: 'ghee',
-    name: 'A2 Gir Cow Ghee',
-    tagline: 'Bilona-churned. Slow. Golden.',
+    id: 'techniques',
+    name: 'Organic farming techniques',
+    tagline: 'Chemical-free by design.',
     description:
-      'Crafted from the milk of pasture-raised Gir cows, bilona-churned the traditional way so every spoonful carries warmth, aroma, and quiet nourishment.',
+      'From soil prep to harvest, we grow with methods that protect the land and keep produce truly fresh — no synthetic chemicals, no shortcuts.',
     image:
-      'https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Golden ghee in a ceramic bowl',
+      'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Rows of healthy green crops on an organic farm',
   },
   {
-    id: 'honey',
-    name: 'Wild Forest Honey',
-    tagline: 'From canopy to jar.',
+    id: 'compost',
+    name: 'Composting & natural fertilizers',
+    tagline: 'Feeding the soil first.',
     description:
-      'Collected from forests along the Western Ghats — unheated, unfiltered, and full of the floral character of the land itself.',
+      'We build fertility with compost and natural inputs so the land stays alive — healthier soil, stronger plants, cleaner food.',
     image:
-      'https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Jar of raw honey with honeycomb',
+      'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Hands working with rich compost and soil',
   },
   {
-    id: 'coffee',
-    name: 'Estate Arabica',
-    tagline: 'Shade-grown. Hand-picked.',
+    id: 'rotation',
+    name: 'Crop rotation & eco-friendly practices',
+    tagline: 'Farming in rhythm with nature.',
     description:
-      'Single-estate coffee grown under native canopy, sun-dried and roasted in small batches for a clean cup with chocolate and spice notes.',
+      'Rotating crops and choosing eco-friendly practices keep pests in balance and the farm resilient season after season.',
     image:
-      'https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Freshly roasted coffee beans',
+      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Open farmland under soft morning light',
   },
   {
-    id: 'oils',
-    name: 'Cold-Pressed Oils',
-    tagline: 'Pressed once. Kept pure.',
+    id: 'fresh',
+    name: 'Farm-to-table freshness',
+    tagline: 'From our fields to your kitchen.',
     description:
-      'Groundnut, coconut, and sesame oils extracted without heat or chemicals — oils that taste like the seed, not the factory.',
+      'What leaves our farm is fresh, chemical-free produce — grown near Malavalli, Karnataka, and shared with care.',
     image:
-      'https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Bottles of golden cold-pressed oil',
+      'https://images.unsplash.com/photo-1488459716781-31db5254d4d3?auto=format&fit=crop&w=1200&q=80',
+    imageAlt: 'Fresh harvested vegetables and produce',
   },
 ]
 
 export const practices = [
   {
-    title: 'Soil first',
-    text: 'We feed the land with compost and cover crops before we ask anything of it.',
+    title: 'Organic techniques',
+    text: 'Everyday farming choices that keep produce chemical-free and the land healthier for the long run.',
   },
   {
-    title: 'Small batches',
-    text: 'Nothing is rushed. Harvest, churn, press, and roast happen in quantities we can stand behind.',
+    title: 'Compost & natural fertility',
+    text: 'We rely on composting and natural fertilizers instead of synthetic inputs.',
   },
   {
-    title: 'Honest labels',
-    text: 'What you read is what you get — no fillers, no shortcuts, no quiet compromises.',
+    title: 'Crop rotation',
+    text: 'Eco-friendly rotation and field practices that protect soil life and biodiversity.',
+  },
+  {
+    title: 'Farm-to-table',
+    text: 'Fresh harvests from our farm near Malavalli — a journey of passion and sustainability.',
   },
 ]

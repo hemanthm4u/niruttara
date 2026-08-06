@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import {
-  products,
+  offerings,
   practices,
   INSTAGRAM_URL,
+  EMAIL,
+  LOCATION,
   whatsappOrderLink,
 } from './data'
 import './App.scss'
@@ -93,11 +95,11 @@ export default function App() {
           <a href="#story" onClick={closeMenu}>
             Story
           </a>
-          <a href="#products" onClick={closeMenu}>
-            Products
+          <a href="#farm" onClick={closeMenu}>
+            The farm
           </a>
           <a href="#craft" onClick={closeMenu}>
-            Craft
+            Practices
           </a>
           <a
             href={whatsappOrderLink()}
@@ -130,10 +132,12 @@ export default function App() {
               height={120}
             />
             <p className="hero__brand">Niruttara Organics</p>
-            <h1 className="hero__headline">Grown without compromise.</h1>
+            <h1 className="hero__headline">
+              Fresh, chemical-free produce from our farm.
+            </h1>
             <p className="hero__lede">
-              Pure foods from the Western Ghats — harvested slowly, prepared
-              honestly, and brought to your table as nature intended.
+              Two IT professionals turned farmers, cultivating sustainable
+              harvests near Malavalli, Karnataka.
             </p>
             <div className="hero__actions">
               <a
@@ -144,8 +148,8 @@ export default function App() {
               >
                 Order on WhatsApp
               </a>
-              <a href="#products" className="btn btn--ghost">
-                View products
+              <a href="#story" className="btn btn--ghost">
+                Our story
               </a>
             </div>
             <p className="hero__note">
@@ -157,55 +161,57 @@ export default function App() {
         <section id="story" className="story">
           <div className="story__inner">
             <Reveal>
-              <p className="eyebrow">ನಿರುತ್ತರ · unsurpassed · Est. 2023</p>
+              <p className="eyebrow">Welcome to Niruttara Organic Farm · Est. 2023</p>
               <h2 className="section-title">
-                Named for what we refuse to settle for.
+                From keyboards to the fields.
               </h2>
             </Reveal>
             <Reveal delay={120}>
               <p className="story__text">
-                Niruttara means having no superior. It is the standard we hold
-                for soil, seed, and craft. From shaded estates in Karnataka to
-                your kitchen, every product is the clearest expression of the
-                land we farm — nothing added, nothing rushed.
+                We are two IT professionals turned farmers on a mission to
+                cultivate fresh, chemical-free produce while promoting
+                sustainable farming. Here we share our experiences, challenges,
+                and tips — a journey of passion and sustainability toward a
+                healthier, greener future.
               </p>
             </Reveal>
           </div>
           <Reveal className="story__visual" delay={200}>
             <img
               src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80"
-              alt="Morning light over green farmland"
+              alt="Morning light over green farmland near Malavalli"
             />
           </Reveal>
         </section>
 
-        <section id="products" className="products">
+        <section id="farm" className="products">
           <div className="products__intro">
             <Reveal>
-              <p className="eyebrow">The harvest</p>
-              <h2 className="section-title">What we bring from the land</h2>
+              <p className="eyebrow">On the farm</p>
+              <h2 className="section-title">What you will find here</h2>
               <p className="products__hint">
-                Browse our products here. To buy, message us on WhatsApp — we
-                confirm stock, pricing, and delivery personally.
+                Browse what we grow and how we farm. To order fresh produce,
+                message us on WhatsApp — we confirm availability and delivery
+                personally.
               </p>
             </Reveal>
           </div>
           <div className="products__list">
-            {products.map((product, index) => (
+            {offerings.map((item, index) => (
               <article
-                key={product.id}
-                id={product.id}
+                key={item.id}
+                id={item.id}
                 className={`product ${index % 2 === 1 ? 'product--reverse' : ''}`}
               >
                 <Reveal className="product__media" delay={80}>
-                  <img src={product.image} alt={product.imageAlt} />
+                  <img src={item.image} alt={item.imageAlt} />
                 </Reveal>
                 <Reveal className="product__copy" delay={160}>
-                  <p className="product__tagline">{product.tagline}</p>
-                  <h3 className="product__name">{product.name}</h3>
-                  <p className="product__desc">{product.description}</p>
+                  <p className="product__tagline">{item.tagline}</p>
+                  <h3 className="product__name">{item.name}</h3>
+                  <p className="product__desc">{item.description}</p>
                   <a
-                    href={whatsappOrderLink(product.name)}
+                    href={whatsappOrderLink(item.name)}
                     className="btn btn--primary btn--sm"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -221,13 +227,13 @@ export default function App() {
         <section id="craft" className="craft">
           <div className="craft__inner">
             <Reveal>
-              <p className="eyebrow">How we work</p>
-              <h2 className="section-title">Patience is the ingredient.</h2>
+              <p className="eyebrow">How we farm</p>
+              <h2 className="section-title">Sustainable by choice.</h2>
             </Reveal>
-            <ul className="craft__list">
+            <ul className="craft__list craft__list--four">
               {practices.map((item, i) => (
                 <li key={item.title}>
-                  <Reveal delay={i * 100}>
+                  <Reveal delay={i * 80}>
                     <h3>{item.title}</h3>
                     <p>{item.text}</p>
                   </Reveal>
@@ -245,6 +251,11 @@ export default function App() {
               This website is for browsing only. Tell us what you need, and we
               will share availability, pricing, and delivery details over
               WhatsApp.
+            </p>
+            <p className="contact__meta">
+              <span>{LOCATION}</span>
+              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
+              <a href="tel:+919980005314">+91 99800 05314</a>
             </p>
             <div className="contact__actions">
               <a
@@ -271,7 +282,9 @@ export default function App() {
       <footer className="footer">
         <img src="/logo.png" alt="" className="footer__logo" width={64} height={64} />
         <div className="footer__brand">Niruttara Organics</div>
-        <p className="footer__note">Unsurpassed organics · Est. 2023</p>
+        <p className="footer__note">
+          Chemical-free produce · {LOCATION} · Est. 2023
+        </p>
         <div className="footer__links">
           <a href={whatsappOrderLink()} target="_blank" rel="noopener noreferrer">
             WhatsApp
@@ -279,6 +292,7 @@ export default function App() {
           <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
             Instagram
           </a>
+          <a href={`mailto:${EMAIL}`}>Email</a>
         </div>
         <p className="footer__copy">© {new Date().getFullYear()} Niruttara Organics</p>
       </footer>
