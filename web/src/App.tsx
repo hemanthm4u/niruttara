@@ -1,15 +1,17 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react'
 import {
-  offerings,
+  products,
+  whyChoose,
   practices,
   INSTAGRAM_URL,
   EMAIL,
   LOCATION,
   whatsappOrderLink,
 } from './data'
+import { OutlineIcon } from './components/OutlineIcon'
 import './App.scss'
 
-function useInView<T extends HTMLElement>(threshold = 0.18) {
+function useInView<T extends HTMLElement>(threshold = 0.15) {
   const ref = useRef<T | null>(null)
   const [visible, setVisible] = useState(false)
 
@@ -79,7 +81,13 @@ export default function App() {
     <div className="site">
       <header className={`nav ${navSolid ? 'nav--solid' : ''} ${menuOpen ? 'nav--open' : ''}`}>
         <a href="#top" className="nav__brand" onClick={closeMenu}>
-          <img src="/niruttar_organics_logo.png" alt="" className="nav__logo" width={40} height={40} />
+          <img
+            src="/niruttar_organics_logo.png"
+            alt=""
+            className="nav__logo"
+            width={40}
+            height={40}
+          />
           <span>Niruttara Organics</span>
         </a>
         <button
@@ -95,11 +103,11 @@ export default function App() {
           <a href="#story" onClick={closeMenu}>
             Story
           </a>
-          <a href="#farm" onClick={closeMenu}>
-            The farm
+          <a href="#products" onClick={closeMenu}>
+            Products
           </a>
-          <a href="#craft" onClick={closeMenu}>
-            Practices
+          <a href="#why" onClick={closeMenu}>
+            Why us
           </a>
           <a
             href={whatsappOrderLink()}
@@ -117,7 +125,7 @@ export default function App() {
         <section className="hero" aria-label="Niruttara Organics">
           <div className="hero__media" aria-hidden="true">
             <img
-              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=2000&q=80"
+              src="/products/farm-cta.jpg"
               alt=""
               className="hero__image"
             />
@@ -132,12 +140,10 @@ export default function App() {
               height={140}
             />
             <h1 className="hero__brand">Niruttara Organics</h1>
-            <p className="hero__headline">
-              Pure by Nature. Premium by Choice.
-            </p>
+            <p className="hero__headline">Pure by Nature. Premium by Choice.</p>
             <p className="hero__lede">
-              Organic vegetables, seasonal fruits, and premium A2 dairy —
-              from our farm near Malavalli to your home.
+              Organic vegetables, seasonal fruits, and premium A2 dairy — from
+              our farm near Malavalli to your home.
             </p>
             <div className="hero__actions">
               <a
@@ -148,12 +154,13 @@ export default function App() {
               >
                 Order on WhatsApp
               </a>
-              <a href="#story" className="btn btn--ghost">
-                Our story
+              <a href="#products" className="btn btn--ghost">
+                Our products
               </a>
             </div>
             <p className="hero__note">
-              Catalogue only — orders are placed over WhatsApp, not on this site.
+              Catalogue only — orders are placed over WhatsApp, not on this
+              site.
             </p>
           </div>
         </section>
@@ -198,50 +205,117 @@ export default function App() {
           </div>
           <Reveal className="story__visual" delay={200}>
             <img
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1600&q=80"
+              src="/products/farm-cta.jpg"
               alt="Morning light over green farmland near Malavalli"
             />
           </Reveal>
         </section>
 
-        <section id="farm" className="products">
-          <div className="products__intro">
-            <Reveal>
-              <p className="eyebrow">On the farm</p>
-              <h2 className="section-title">What you will find here</h2>
-              <p className="products__hint">
-                Browse our organic vegetables, seasonal fruits, and A2 dairy.
-                To order, message us on WhatsApp — we confirm availability and
-                delivery personally.
+        <section id="products" className="catalog">
+          <div className="catalog__inner">
+            <Reveal className="catalog__intro">
+              <p className="eyebrow">From our farm</p>
+              <h2 className="section-title">Our Products</h2>
+              <p className="catalog__subtitle">
+                Experience the purity of nature through our carefully cultivated
+                produce and handcrafted A2 dairy products, brought directly from
+                our farm to your family.
               </p>
             </Reveal>
+
+            <div className="catalog__grid">
+              {products.map((product, i) => (
+                <Reveal key={product.id} delay={i * 70}>
+                  <article className="pcard" id={product.id}>
+                    <div className="pcard__media">
+                      <img
+                        src={product.image}
+                        alt={product.imageAlt}
+                        loading="lazy"
+                      />
+                    </div>
+                    <div className="pcard__body">
+                      <h3 className="pcard__title">{product.name}</h3>
+                      <p className="pcard__desc">{product.description}</p>
+                      <a
+                        href={whatsappOrderLink(product.name)}
+                        className="pcard__cta"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {product.cta}
+                        <span aria-hidden="true">→</span>
+                      </a>
+                    </div>
+                  </article>
+                </Reveal>
+              ))}
+            </div>
           </div>
-          <div className="products__list">
-            {offerings.map((item, index) => (
-              <article
-                key={item.id}
-                id={item.id}
-                className={`product ${index % 2 === 1 ? 'product--reverse' : ''}`}
+        </section>
+
+        <section id="why" className="why">
+          <div className="why__inner">
+            <Reveal className="why__intro">
+              <p className="eyebrow">Our promise</p>
+              <h2 className="section-title">Why Choose Niruttara Organics</h2>
+            </Reveal>
+            <ul className="why__grid">
+              {whyChoose.map((item, i) => (
+                <li key={item.id}>
+                  <Reveal delay={i * 60}>
+                    <div className="why-card">
+                      <div className="why-card__icon">
+                        <OutlineIcon
+                          name={
+                            item.icon as
+                              | 'leaf'
+                              | 'cow'
+                              | 'honey'
+                              | 'cycle'
+                              | 'tractor'
+                              | 'heart'
+                          }
+                        />
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                    </div>
+                  </Reveal>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="farm-cta" aria-label="Order from our farm">
+          <div className="farm-cta__media" aria-hidden="true">
+            <img src="/products/farm-cta.jpg" alt="" />
+            <div className="farm-cta__veil" />
+          </div>
+          <Reveal className="farm-cta__content">
+            <h2 className="farm-cta__title">
+              Fresh from Our Farm to Your Home
+            </h2>
+            <p className="farm-cta__text">
+              Experience the difference of naturally grown produce and
+              handcrafted A2 dairy products made with care, purity and
+              tradition.
+            </p>
+            <div className="farm-cta__actions">
+              <a
+                href={whatsappOrderLink()}
+                className="btn btn--gold"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <Reveal className="product__media" delay={80}>
-                  <img src={item.image} alt={item.imageAlt} />
-                </Reveal>
-                <Reveal className="product__copy" delay={160}>
-                  <p className="product__tagline">{item.tagline}</p>
-                  <h3 className="product__name">{item.name}</h3>
-                  <p className="product__desc">{item.description}</p>
-                  <a
-                    href={whatsappOrderLink(item.name)}
-                    className="btn btn--primary btn--sm"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Enquire on WhatsApp
-                  </a>
-                </Reveal>
-              </article>
-            ))}
-          </div>
+                Order Now
+              </a>
+              <a href="#contact" className="btn btn--ghost">
+                Contact Us
+              </a>
+            </div>
+          </Reveal>
         </section>
 
         <section id="craft" className="craft">
@@ -300,10 +374,16 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        <img src="/niruttar_organics_logo.png" alt="" className="footer__logo" width={64} height={64} />
+        <img
+          src="/niruttar_organics_logo.png"
+          alt=""
+          className="footer__logo"
+          width={64}
+          height={64}
+        />
         <div className="footer__brand">Niruttara Organics</div>
         <p className="footer__note">
-          Chemical-free produce · {LOCATION} · Est. 2023
+          Pure by Nature. Premium by Choice. · {LOCATION} · Est. 2023
         </p>
         <div className="footer__links">
           <a href={whatsappOrderLink()} target="_blank" rel="noopener noreferrer">
@@ -314,7 +394,9 @@ export default function App() {
           </a>
           <a href={`mailto:${EMAIL}`}>Email</a>
         </div>
-        <p className="footer__copy">© {new Date().getFullYear()} Niruttara Organics</p>
+        <p className="footer__copy">
+          © {new Date().getFullYear()} Niruttara Organics
+        </p>
       </footer>
 
       <a

@@ -14,46 +14,90 @@ export const whatsappOrderLink = (productName?: string) => {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 }
 
-export const offerings = [
+export const products = [
+  {
+    id: 'dairy',
+    name: 'A2 Dairy Products',
+    description:
+      'Fresh A2 Milk, Paneer, Butter, Ghee and Buttermilk prepared from our naturally raised Gir cows using traditional methods for exceptional taste and nutrition.',
+    cta: 'Explore Dairy',
+    image: '/products/a2-dairy.jpg',
+    imageAlt: 'Fresh A2 dairy products from Gir cows',
+  },
   {
     id: 'vegetables',
-    name: 'Organic vegetables',
-    tagline: 'Grown with care and integrity.',
+    name: 'Organic Vegetables',
     description:
-      'Fresh, chemical-free vegetables cultivated on our farm with respect for nature — wholesome harvests from soil to table.',
-    image:
-      'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Fresh organic vegetables in the field',
+      'Naturally grown vegetables cultivated without harmful chemicals and harvested fresh to preserve their flavour and nutrition.',
+    cta: 'Explore Vegetables',
+    image: '/products/vegetables.jpg',
+    imageAlt: 'Fresh colorful organic vegetables',
   },
   {
     id: 'fruits',
-    name: 'Seasonal fruits',
-    tagline: 'Picked at their peak.',
+    name: 'Seasonal Fruits',
     description:
-      'Seasonal fruits grown sustainably and harvested for purity and freshness — naturally wholesome, ethically produced.',
-    image:
-      'https://images.unsplash.com/photo-1619566636858-adf3ef4644b9?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Basket of fresh seasonal fruit',
+      'Seasonal fruits ripened naturally on the farm for authentic taste and wholesome goodness.',
+    cta: 'Explore Fruits',
+    image: '/products/fruits.jpg',
+    imageAlt: 'Premium fresh seasonal fruits',
+  },
+  {
+    id: 'honey',
+    name: 'Natural Honey',
+    description:
+      'Pure, raw and unprocessed honey harvested with care while preserving its natural flavour and nutrients.',
+    cta: 'Explore Honey',
+    image: '/products/honey.jpg',
+    imageAlt: 'Premium glass jar of natural honey',
+  },
+  {
+    id: 'vermicompost',
+    name: 'Organic Vermicompost',
+    description:
+      'Organic vermicompost that naturally improves soil fertility and promotes healthier plant growth.',
+    cta: 'Explore Vermicompost',
+    image: '/products/vermicompost.jpg',
+    imageAlt: 'Rich dark vermicompost with healthy plants',
+  },
+]
+
+export const whyChoose = [
+  {
+    id: 'grown',
+    title: 'Naturally Grown',
+    text: 'Produce cultivated with care, without harmful chemicals.',
+    icon: 'leaf',
   },
   {
     id: 'dairy',
-    name: 'Premium A2 dairy',
-    tagline: 'From our Gir cows.',
-    description:
-      'Our Gir cows are nurtured in a natural, stress-free environment. Fresh A2 Milk, Paneer, Butter, Ghee, and more — rich in taste, uncompromising in quality.',
-    image:
-      'https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Fresh A2 ghee and dairy products',
+    title: 'Gir Cow A2 Dairy',
+    text: 'Premium A2 milk products from stress-free Gir cows.',
+    icon: 'cow',
   },
   {
-    id: 'farm-to-home',
-    name: 'Farm to your home',
-    tagline: 'Crafted with care.',
-    description:
-      'Every harvest and every product reflects our commitment to sustainable farming, purity, and freshness — from our farm to your home.',
-    image:
-      'https://images.unsplash.com/photo-1488459716781-31db5254d4d3?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Fresh farm produce ready for home',
+    id: 'pure',
+    title: 'Pure & Unprocessed',
+    text: 'Honey and harvests kept close to their natural state.',
+    icon: 'honey',
+  },
+  {
+    id: 'sustainable',
+    title: 'Sustainable Farming',
+    text: 'Practices that protect soil, animals, and seasons.',
+    icon: 'cycle',
+  },
+  {
+    id: 'fresh',
+    title: 'Farm Fresh',
+    text: 'From our fields near Malavalli to your family table.',
+    icon: 'tractor',
+  },
+  {
+    id: 'trust',
+    title: 'Quality You Can Trust',
+    text: 'Crafted with integrity, purity, and tradition.',
+    icon: 'heart',
   },
 ]
 
