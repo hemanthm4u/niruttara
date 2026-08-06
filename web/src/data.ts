@@ -14,64 +14,108 @@ export const whatsappOrderLink = (productName?: string) => {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
 }
 
-export const offerings = [
+export const products = [
   {
-    id: 'techniques',
-    name: 'Organic farming techniques',
-    tagline: 'Chemical-free by design.',
+    id: 'dairy',
+    name: 'A2 Dairy Products',
     description:
-      'From soil prep to harvest, we grow with methods that protect the land and keep produce truly fresh — no synthetic chemicals, no shortcuts.',
-    image:
-      'https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Rows of healthy green crops on an organic farm',
+      'Fresh A2 Milk, Paneer, Butter, Ghee and Buttermilk prepared from our naturally raised Gir cows using traditional methods for exceptional taste and nutrition.',
+    cta: 'Explore Dairy',
+    image: '/products/a2-dairy.png',
+    imageAlt: 'Jar of Niruttara Organics A2 Gir Cow Ghee',
   },
   {
-    id: 'compost',
-    name: 'Composting & natural fertilizers',
-    tagline: 'Feeding the soil first.',
+    id: 'vegetables',
+    name: 'Organic Vegetables',
     description:
-      'We build fertility with compost and natural inputs so the land stays alive — healthier soil, stronger plants, cleaner food.',
-    image:
-      'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Hands working with rich compost and soil',
+      'Naturally grown vegetables cultivated without harmful chemicals and harvested fresh to preserve their flavour and nutrition.',
+    cta: 'Explore Vegetables',
+    image: '/products/vegetables.png',
+    imageAlt: 'Freshly harvested organic drumsticks from the farm',
   },
   {
-    id: 'rotation',
-    name: 'Crop rotation & eco-friendly practices',
-    tagline: 'Farming in rhythm with nature.',
+    id: 'fruits',
+    name: 'Seasonal Fruits',
     description:
-      'Rotating crops and choosing eco-friendly practices keep pests in balance and the farm resilient season after season.',
-    image:
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Open farmland under soft morning light',
+      'Seasonal fruits ripened naturally on the farm for authentic taste and wholesome goodness.',
+    cta: 'Explore Fruits',
+    image: '/products/fruits.png',
+    imageAlt: 'Fresh farm bananas and papaya',
+  },
+  {
+    id: 'honey',
+    name: 'Natural Honey',
+    description:
+      'Pure, raw and unprocessed honey harvested with care while preserving its natural flavour and nutrients.',
+    cta: 'Explore Honey',
+    image: '/products/honey.png',
+    imageAlt: 'Fresh honeycomb frame from our farm',
+  },
+  {
+    id: 'vermicompost',
+    name: 'Organic Vermicompost',
+    description:
+      'Organic vermicompost that naturally improves soil fertility and promotes healthier plant growth.',
+    cta: 'Explore Vermicompost',
+    image: '/products/vermicompost.png',
+    imageAlt: 'Living soil with earthworms for vermicompost',
+  },
+]
+
+export const whyChoose = [
+  {
+    id: 'grown',
+    title: 'Naturally Grown',
+    text: 'Produce cultivated with care, without harmful chemicals.',
+    icon: 'leaf',
+  },
+  {
+    id: 'dairy',
+    title: 'Gir Cow A2 Dairy',
+    text: 'Premium A2 milk products from stress-free Gir cows.',
+    icon: 'cow',
+  },
+  {
+    id: 'pure',
+    title: 'Pure & Unprocessed',
+    text: 'Honey and harvests kept close to their natural state.',
+    icon: 'honey',
+  },
+  {
+    id: 'sustainable',
+    title: 'Sustainable Farming',
+    text: 'Practices that protect soil, animals, and seasons.',
+    icon: 'cycle',
   },
   {
     id: 'fresh',
-    name: 'Farm-to-table freshness',
-    tagline: 'From our fields to your kitchen.',
-    description:
-      'What leaves our farm is fresh, chemical-free produce — grown near Malavalli, Karnataka, and shared with care.',
-    image:
-      'https://images.unsplash.com/photo-1488459716781-31db5254d4d3?auto=format&fit=crop&w=1200&q=80',
-    imageAlt: 'Fresh harvested vegetables and produce',
+    title: 'Farm Fresh',
+    text: 'From our fields near Malavalli to your family table.',
+    icon: 'tractor',
+  },
+  {
+    id: 'trust',
+    title: 'Quality You Can Trust',
+    text: 'Crafted with integrity, purity, and tradition.',
+    icon: 'heart',
   },
 ]
 
 export const practices = [
   {
-    title: 'Organic techniques',
-    text: 'Everyday farming choices that keep produce chemical-free and the land healthier for the long run.',
+    title: 'Sustainable farming',
+    text: 'We cultivate with integrity and respect for nature — soil, animals, and season in balance.',
   },
   {
-    title: 'Compost & natural fertility',
-    text: 'We rely on composting and natural fertilizers instead of synthetic inputs.',
+    title: 'Animal welfare',
+    text: 'Our Gir cows live in a natural, stress-free environment with the highest standards of care.',
   },
   {
-    title: 'Crop rotation',
-    text: 'Eco-friendly rotation and field practices that protect soil life and biodiversity.',
+    title: 'Purity & freshness',
+    text: 'Every harvest and dairy product is naturally wholesome, ethically produced, and crafted with care.',
   },
   {
-    title: 'Farm-to-table',
-    text: 'Fresh harvests from our farm near Malavalli — a journey of passion and sustainability.',
+    title: 'Farm to home',
+    text: 'From our farm near Malavalli to your kitchen — food that begins at the source.',
   },
 ]

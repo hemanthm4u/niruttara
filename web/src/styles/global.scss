@@ -1,16 +1,21 @@
 :root {
+  --forest: #2e5e3e;
+  --forest-deep: #1f4230;
+  --cream: #f8f6f1;
+  --cream-deep: #efebe3;
+  --brown: #8b5e3c;
+  --gold: #c7a66a;
+  --gold-soft: #e2cfa0;
   --brand: #b33a2b;
   --brand-deep: #8f2d22;
-  --forest: #1e3a2f;
-  --forest-deep: #14261f;
-  --moss: #3d6b52;
-  --honey: #c9a84c;
-  --honey-soft: #e8d49a;
-  --mist: #f3f0ea;
-  --paper: #faf7f2;
-  --ink: #1a2420;
-  --ink-soft: #4a5a52;
+  --mist: #f8f6f1;
+  --paper: #ffffff;
+  --ink: #1f2a24;
+  --ink-soft: #5a655e;
   --white: #ffffff;
+  --radius: 16px;
+  --shadow: 0 12px 40px rgba(31, 42, 36, 0.08);
+  --shadow-hover: 0 18px 48px rgba(31, 42, 36, 0.14);
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Sora', system-ui, sans-serif;
@@ -43,7 +48,7 @@ body {
   font-size: 1rem;
   line-height: 1.65;
   color: var(--ink);
-  background: var(--mist);
+  background: var(--cream);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -71,7 +76,13 @@ p {
   margin: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 ::selection {
-  background: rgba(179, 58, 43, 0.18);
+  background: rgba(199, 166, 106, 0.35);
   color: var(--ink);
 }
