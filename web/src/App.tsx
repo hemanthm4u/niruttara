@@ -80,7 +80,7 @@ export default function App() {
       <header className={`nav ${navSolid ? 'nav--solid' : ''} ${menuOpen ? 'nav--open' : ''}`}>
         <a href="#top" className="nav__brand" onClick={closeMenu}>
           <img src="/logo.png" alt="" className="nav__logo" width={40} height={40} />
-          <span>Niruttara</span>
+          <span>Niruttara Organics</span>
         </a>
         <button
           className="nav__toggle"
@@ -126,15 +126,15 @@ export default function App() {
           <div className="hero__content">
             <img
               src="/logo.png"
-              alt="Niruttara Organics"
+              alt=""
               className="hero__mark"
-              width={120}
-              height={120}
+              width={140}
+              height={140}
             />
-            <p className="hero__brand">Niruttara Organics</p>
-            <h1 className="hero__headline">
+            <h1 className="hero__brand">Niruttara Organics</h1>
+            <p className="hero__headline">
               Pure by Nature. Premium by Choice.
-            </h1>
+            </p>
             <p className="hero__lede">
               Organic vegetables, seasonal fruits, and premium A2 dairy —
               from our farm near Malavalli to your home.
