@@ -21,8 +21,8 @@ export const products = [
     description:
       'Fresh A2 Milk, Paneer, Butter, Ghee and Buttermilk prepared from our naturally raised Gir cows using traditional methods for exceptional taste and nutrition.',
     cta: 'Explore Dairy',
-    image: '/products/a2-dairy.jpg',
-    imageAlt: 'Fresh A2 dairy products from Gir cows',
+    image: '/products/a2-dairy.png',
+    imageAlt: 'Jar of Niruttara Organics A2 Gir Cow Ghee',
   },
   {
     id: 'vegetables',
@@ -30,8 +30,8 @@ export const products = [
     description:
       'Naturally grown vegetables cultivated without harmful chemicals and harvested fresh to preserve their flavour and nutrition.',
     cta: 'Explore Vegetables',
-    image: '/products/vegetables.jpg',
-    imageAlt: 'Fresh colorful organic vegetables',
+    image: '/products/vegetables.png',
+    imageAlt: 'Freshly harvested organic drumsticks from the farm',
   },
   {
     id: 'fruits',
@@ -39,8 +39,8 @@ export const products = [
     description:
       'Seasonal fruits ripened naturally on the farm for authentic taste and wholesome goodness.',
     cta: 'Explore Fruits',
-    image: '/products/fruits.jpg',
-    imageAlt: 'Premium fresh seasonal fruits',
+    image: '/products/fruits.png',
+    imageAlt: 'Fresh farm bananas and papaya',
   },
   {
     id: 'honey',
@@ -48,8 +48,8 @@ export const products = [
     description:
       'Pure, raw and unprocessed honey harvested with care while preserving its natural flavour and nutrients.',
     cta: 'Explore Honey',
-    image: '/products/honey.jpg',
-    imageAlt: 'Premium glass jar of natural honey',
+    image: '/products/honey.png',
+    imageAlt: 'Fresh honeycomb frame from our farm',
   },
   {
     id: 'vermicompost',
@@ -57,8 +57,8 @@ export const products = [
     description:
       'Organic vermicompost that naturally improves soil fertility and promotes healthier plant growth.',
     cta: 'Explore Vermicompost',
-    image: '/products/vermicompost.jpg',
-    imageAlt: 'Rich dark vermicompost with healthy plants',
+    image: '/products/vermicompost.png',
+    imageAlt: 'Living soil with earthworms for vermicompost',
   },
 ]
 
